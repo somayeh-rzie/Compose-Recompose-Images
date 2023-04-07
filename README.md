@@ -1,29 +1,24 @@
 # Compose-Recompose-Images
-A simple mlp project written in python which compose image and then recompose it again (No prepared functions or libraries are allowed for implementing the multi layer model)
+A simple mlp project written in python which compose image and then recompose it again (No prepared functions or libraries are allowed for implementing the multilayer model)
 
-About This Project
-Implementing a multilayer perceptron neural network with 3 layers :
-I)input layer(original image) with n neurons
-II)one hidden layer(composed image) with m (m<n) neurons
-III)output layer(recomposed image) with n neurons
-This network uses simple OCR Train Set in Data to train perceptron and then test it by using OCR Test Set in Data and changing some parameters. This evaluation is based on Error and Number of iterations that network will be converge. Results have shown below :
 
-1.parameter: number of hidden layer neurons = (Respectively) 8, 16, 32
-(constants : batch size = 1, learning rate = 0.1)
-Alt text
-
-Error = 28.6% , Number of Iterations = 64
+# About This Project
+Implementing a multilayer perceptron neural network with 3 layers :<br /><br />
+I) input layer(original image) with n neurons<br />
+II) one hidden layer(composed image) with m (m<n) neurons<br />
+III) output layer(recomposed image) with n neurons<br />
+This network uses a Train Set with 91 images in order to train perceptron and then test it by using Test Set with 5 images and changing some parameters. This evaluation is based on *Error* and *PSNR(Read Attached Paper)* <br />
 
 
 
 
-Alt text
-Error = 9.5% , Number of Iterations = 22
 
 
 
-Alt text
-Error = 23.8% , Number of Iterations = 13
+
+
+
+
 
 
 
