@@ -16,13 +16,13 @@ As we always train our models with backpropagation algorithm but with multiple n
 - Momentum Train : <br />
 Here we have a parameter named momentum (first initialized 0.5).<br />
 All steps are as same as Standard Train but:<br />
-I) Our iteration condition is minimum psnr [^1]. that we set to 9.3 based on trial and error.<br />
+1) Our iteration condition is minimum psnr [^1]. that we set to 9.3 based on trial and error.<br />
 $$Cost = \sum\sum (x_ij - \hat{x_ij})^2$$ <br />
 $$PSNR =  10 * log \left( 255^2 * ROWS * COLS \over Cost \right)$$ <br />
-II) For updating weights and biases we use values of 2 previous levels.<br />
+2) For updating weights and biases we use values of 2 previous levels.<br />
 
 
-Evaluation is based on *Error* and *PSNR* scales.<br /><br />
+Evaluation is based on **Error** and **PSNR** scales.<br /><br />
 
 [^1]: Read Attached Paper
 
