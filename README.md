@@ -6,8 +6,23 @@ A simple mlp project written in python which compose image and then recompose it
 Implementing a multilayer perceptron neural network with 3 layers :<br /><br />
 I) input layer(original image) with n neurons<br />
 II) one hidden layer(composed image) with m (m<n) neurons<br />
-III) output layer(recomposed image) with n neurons<br />
-This network uses a Train Set with 91 images in order to train perceptron and then test it by using Test Set with 5 images and changing some parameters. This evaluation is based on *Error* and *PSNR (Read Attached Paper)* <br />
+III) output layer(recomposed image) with n neurons<br /><br />
+
+First of all we read our .jpg train files and store them in a 256 * 256 array.<br />
+Then we partition our  256 * 256  pixels images to  8 * 8  blocks by using `reassample` function.<br />
+Now we have two methods for training our model:<br />
+- Standard Train : <br />
+As we always train our models with backpropagation algorithm but with multiple networks each have its own weight and bias matrix and uniformly distribute them between networks.<br />
+- Momentum Train : <br />
+Here we have a parameter named momentum (first initialized 0.5).<br />
+All steps are as same as Standard Train but:<br />
+I) Our iteration condition is minimum psnr (Read Attached Paper) that we set to 9.3 based on trial and error.<br />
+$$\left(Cost = \sum\sum (x_ij - \hat{x_ij})^2 \right) $$ <br />
+II) For updating weights and biases we use values of 2 previous levels.<br />
+
+
+Evaluation is based on *Error* and *PSNR* scales.<br /><br />
+
 
 
 # Built With
